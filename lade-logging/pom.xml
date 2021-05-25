@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.wushi.lade</groupId>
+        <artifactId>lade-platform</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>lade-logging</artifactId>
+    <description>日志通道</description>
+    <packaging>jar</packaging>
+
+    <properties>
+        <jsoup.version>1.12.1</jsoup.version>
+        <commons-fileupload.version>1.4</commons-fileupload.version>
+        <ipaddress.version>5.2.1</ipaddress.version>
+        <swagger-annotations.version>1.5.22</swagger-annotations.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.wushi.lade</groupId>
+            <artifactId>lade-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpasyncclient</artifactId>
+        </dependency>
+    </dependencies>
+</project>

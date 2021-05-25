@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wushi.lade.tests.mapper.SysUserAccountMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wushi.lade.tests.entity.SysUserAccount">
+        <result column="USER_ID" property="userId" />
+        <result column="USER_NAME" property="userName" />
+        <result column="USER_PWD" property="userPwd" />
+        <result column="USER_STATUS" property="userStatus" />
+        <result column="UNLOCK_TIME" property="unlockTime" />
+        <result column="ERROR_COUNT" property="errorCount" />
+        <result column="IS_DEVELOPER" property="isDeveloper" />
+        <result column="CLIENT_ID" property="clientId" />
+        <result column="IS_MULTIPLE_LOGIN" property="isMultipleLogin" />
+        <result column="CREATE_TIME" property="createTime" />
+        <result column="REFUSAL_REASON" property="refusalReason" />
+        <result column="CREATE_ID" property="createId" />
+        <result column="IS_APP" property="isApp" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, USER_NAME, USER_PWD, USER_STATUS, UNLOCK_TIME, ERROR_COUNT, IS_DEVELOPER, CLIENT_ID, IS_MULTIPLE_LOGIN, CREATE_TIME, REFUSAL_REASON, CREATE_ID, IS_APP
+    </sql>
+
+</mapper>

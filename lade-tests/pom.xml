@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.wushi.lade</groupId>
+        <artifactId>lade-platform</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>lade-tests</artifactId>
+    <description>Lade单元测试模块</description>
+    <packaging>jar</packaging>
+
+    <properties>
+        <jna.version>4.5.2</jna.version>
+        <mysql.version>8.0.18</mysql.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.wushi.lade</groupId>
+            <artifactId>lade-web</artifactId>
+        </dependency>
+        <!-- EC 加密解密模块 -->
+        <dependency>
+            <groupId>com.wushi.lade</groupId>
+            <artifactId>lade-security</artifactId>
+        </dependency>
+        <!-- EC 数据库连接模块 -->
+        <dependency>
+            <groupId>com.wushi.lade</groupId>
+            <artifactId>lade-dao</artifactId>
+        </dependency>
+        <!-- EC 通用模块 -->
+        <dependency>
+            <groupId>com.wushi.lade</groupId>
+            <artifactId>lade-common</artifactId>
+        </dependency>
+        <!-- EC 缓存模块 -->
+        <dependency>
+            <groupId>com.wushi.lade</groupId>
+            <artifactId>lade-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wushi.lade</groupId>
+            <artifactId>lade-logging</artifactId>
+        </dependency>
+        <!-- 单元测试 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- okhttp引入 -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.14.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>${jna.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>${jna.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wushi.lade</groupId>
+            <artifactId>lade-tenant</artifactId>
+            <version>${lade.version}</version>
+        </dependency>
+        <!-- Mysql8.0驱动 -->
+        <dependency>
+            <groupId>com.wushi.jdbc</groupId>
+            <artifactId>mysql</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!-- Oracle12c驱动 -->
+        <dependency>
+            <groupId>com.wushi.jdbc</groupId>
+            <artifactId>oracle</artifactId>
+            <version>11.2.0.4</version>
+        </dependency>
+        <!-- SqlServer驱动 -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>8.2.2.jre8</version>
+        </dependency>
+        <!-- 华为高斯数据库驱动 -->
+        <dependency>
+            <groupId>com.wushi.jdbc</groupId>
+            <artifactId>gauss</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- 达梦数据库驱动 -->
+        <dependency>
+            <groupId>com.wushi.jdbc</groupId>
+            <artifactId>dm</artifactId>
+            <version>8.1.0.0</version>
+        </dependency>
+        <!-- PG数据库 -->
+        <dependency>
+            <scope>compile</scope>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.8</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

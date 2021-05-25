@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wushi.lade.tests.mapper.SysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wushi.lade.tests.entity.SysUser">
+        <result column="USER_ID" property="userId" />
+        <result column="REAL_NAME" property="realName" />
+        <result column="TELEPHONE" property="telephone" />
+        <result column="ID_CARD" property="idCard" />
+        <result column="SEX" property="sex" />
+        <result column="ADDRESS" property="address" />
+        <result column="REMARK" property="remark" />
+        <result column="SORT_ID" property="sortId" />
+        <result column="PIN_YIN" property="pinYin" />
+        <result column="HEAD_PORTRAIL" property="headPortrail" />
+        <result column="IS_HIDE_PHONE" property="isHidePhone" />
+        <result column="CREATE_TIME" property="createTime" />
+        <result column="UPDATE_TIME" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, REAL_NAME, TELEPHONE, ID_CARD, SEX, E_MAIL, ADDRESS, REMARK, SORT_ID, PIN_YIN, HEAD_PORTRAIL, IS_HIDE_PHONE, CREATE_TIME, UPDATE_TIME
+    </sql>
+
+    <select id="selectWithAccount" resultType="Map">
+        select * from ws_sys_user_account a left join ws_sys_user u ON a.user_id = u.user_id WHERE a.user_id = #{userId}
+    </select>
+
+</mapper>

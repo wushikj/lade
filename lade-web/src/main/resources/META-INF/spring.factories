@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wushi.lade.web.filter.ip.IpFilterAutoConfiguration,\
+  com.wushi.lade.web.filter.request.RequestFilterAutoConfiguration,\
+  com.wushi.lade.web.filter.exception.ExceptionFilterAutoConfiguration,\
+  com.wushi.lade.web.filter.file.MaliciousFileAutoConfiguration,\
+  com.wushi.lade.web.filter.paramsign.ParamSignFilterAutoConfiguration

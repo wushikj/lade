@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wushi.lade.dao.autoconfigure.DaoAutoConfiguration

@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wushi.lade.cache.autoconfiguration.CacheAutoConfiguration,\
+  com.wushi.lade.cache.autoconfiguration.EhCacheAutoConfiguration,\
+  com.wushi.lade.cache.autoconfiguration.RedisAutoConfiguration

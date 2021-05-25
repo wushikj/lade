@@ -1,0 +1,14 @@
+.log
+Log/
+log/
+logs/
+.mvn/
+.idea/
+target/
+/lade-web/target/
+/lade-tests/target/
+/lade-security/target/
+/lade-es/target/
+/lade-common/target/
+*.iml
+.DS_Store

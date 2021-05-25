@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.wushi.lade</groupId>
+    <artifactId>lade-platform</artifactId>
+    <version>1.3.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.wushi.lade</groupId>
+  <artifactId>lade-tenant</artifactId>
+  <version>1.3.0-SNAPSHOT</version>
+  <description>Lade多租户模块</description>
+  <properties>
+    <mybatis-plus.version>3.4.2</mybatis-plus.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.wushi.lade</groupId>
+      <artifactId>lade-dao</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+</project>
