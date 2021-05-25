@@ -12,3 +12,4 @@ target/
 /lade-common/target/
 *.iml
 .DS_Store
+*.flattened-pom.xml
